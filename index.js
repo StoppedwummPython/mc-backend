@@ -1,11 +1,6 @@
 const app = require("express")()
 const fs = require("fs")
 const path = require("path")
-const login = require("./auth/login.js")
-
-let sessions = {
-
-}
 
 require("dotenv").config({
     path: path.join(__dirname, ".env.local"),
@@ -29,21 +24,41 @@ app.listen(port, () => {
 
 fs.readdirSync(path.join(__dirname, "api")).forEach((file) => {
     const module = require(path.join(__dirname, "api", file))
-    const route = file.replace(/\.js$/, "")
+    const route = file.replace(/\.js$/, "") + (module.beta ? ":beta" : "")
     if (module.get) {
         app.get("/api/" + route, module.get)
+    } else {
+        app.get("/api/" + route, (req, res) => {
+            res.status(404).json({ error: "Not found" })
+        })
     }
     if (module.post) {
         app.post("/api/" + route, module.post)
+    } else {
+        app.post("/api/" + route, (req, res) => {
+            res.status(404).json({ error: "Not found" })
+        })
     }
     if (module.put) {
         app.put("/api/" + route, module.put)
+    } else {
+        app.put("/api/" + route, (req, res) => {
+            res.status(404).json({ error: "Not found" })
+        })
     }
     if (module.delete) {
         app.delete("/api/" + route, module.delete)
+    } else {
+        app.delete("/api/" + route, (req, res) => {
+            res.status(404).json({ error: "Not found" })
+        })
     }
     if (module.patch) {
         app.patch("/api/" + route, module.patch)
+    } else {
+        app.patch("/api/" + route, (req, res) => {
+            res.status(404).json({ error: "Not found" })
+        })
     }
     if (module.all) {
         app.all("/api/" + route, module.all)

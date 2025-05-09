@@ -5,6 +5,7 @@ const path = require("path")
  * Handles the /api/search endpoint.
  */
 module.exports = {
+    beta: false,
     /**
      * Searches for mods on Modrinth.
      * @param {import("express").Request} req - The request object.
@@ -34,5 +35,5 @@ module.exports = {
         const response = await fetch(`${url}?${params}`)
         // Return the data as JSON
         res.json(await response.json())
-    },
+    }
 }
