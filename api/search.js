@@ -18,11 +18,11 @@ module.exports = {
             query: req.query.q,
             facets: JSON.stringify([
                 // Only search for mods
-                ["project_type", "mod"],
+                ["project_type:mod"],
                 // Only search for mods that support Minecraft 1.21.1
-                ["versions", "1.21.1"],
+                ["versions:1.21.1"],
                 // Only search for mods that are in the neoforge category
-                ["categories", "neoforge"],
+                ["categories:neoforge"],
             ]),
         })
         // Fetch the data from Modrinth
