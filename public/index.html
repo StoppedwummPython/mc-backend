@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minecraft Launcher</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+
+        .jumbotron {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://i.ytimg.com/vi/tt0XIbQsNp4/maxresdefault.jpg');
+            background-position: center top;
+            background-size: cover;
+            color: white;
+            text-shadow: 1px 1px 2px #000;
+            /* Make it responsive */
+            height: 100vh;
+            /* Dim the background image */
+            @keyframes fadeIn {
+                from {
+                    opacity: 0;
+                }
+
+                to {
+                    opacity: 1;
+                }
+            }
+            animation: fadeIn 1s ease-in-out;
+            /* Add a subtle shadow to the text */
+            text-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+            /* Add a subtle glow to the text */
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="jumbotron text-center my-5">
+            <h1 class="display-4">Welcome to OpenSource Minecraft Launcher</h1>
+            <p class="lead">Experience the ultimate Minecraft gaming with our open-source launcher.</p>
+            <a href="download.html" class="btn btn-primary btn-lg">Download Now</a>
+        </div>
+        <div class="row text-center">
+            <div class="col-md-4">
+                <h3>Open Source</h3>
+                <p>Completely free and open-source. Contribute and customize.</p>
+                <a href="https://github.com/StoppedwummPython/minecraft-launcher"><img src="https://cdn2.iconfinder.com/data/icons/font-awesome/1792/github-512.png" alt="GitHub" style="width: 50px; height: 50px;">Our github Repo</a>
+            </div>
+            <div class="col-md-4">
+                <h3>Easy to Use</h3>
+                <p>Simple and user-friendly interface for all ages.</p>
+            </div>
+            <div class="col-md-4">
+                <h3>Community Support</h3>
+                <p>Join our community for support and updates.</p>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>

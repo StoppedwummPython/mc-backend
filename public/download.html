@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minecraft Launcher - Download</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+
+        .jumbotron {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://i.ytimg.com/vi/tt0XIbQsNp4/maxresdefault.jpg');
+            background-position: center top;
+            background-size: cover;
+            color: white;
+            text-shadow: 1px 1px 2px #000;
+            height: 100vh;
+            animation: fadeIn 1s ease-in-out;
+            text-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        .install-instructions {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="jumbotron text-center my-5">
+            <h1 class="display-4">Download OpenSource Minecraft Launcher</h1>
+            <p class="lead">Experience the ultimate Minecraft gaming with our open-source launcher.</p>
+            <p class="lead">Requires <a href="https://nodejs.org/en/download/">NodeJS</a> to be installed.</p>
+            <a href="https://github.com/StoppedwummPython/minecraft-launcher/archive/main.zip" class="btn btn-primary btn-lg">Download Now</a>
+            <a href="https://github.com/StoppedwummPython/minecraft-launcher/archive/gui-preview.zip" class="btn btn-primary btn-lg">Download UI Preview</a>
+        </div>
+        <div class="install-instructions">
+            <h3>Install Instructions</h3>
+            <p>After downloading the zip, extract it to a folder of your choice.</p>
+            <p>Open a terminal or command prompt in the extracted folder and type "npm install" to install the dependencies.</p>
+            <p>After the installation is complete, type "npm start".</p>
+            <p>An detailed installation guide can be found in the <a href="https://github.com/StoppedwummPython/minecraft-launcher/blob/main/README.md">github repo README</a>.</p>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>
+
