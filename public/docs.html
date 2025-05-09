@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minecraft Launcher - API Docs</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <h1>HTTP API Docs</h1>
+        <p>This is a list of endpoints that are available on the API.</p>
+        <ul>
+            <li><a href="#gh">/api/gh</a></li>
+            <li><a href="#search">/api/search</a></li>
+        </ul>
+        <hr>
+        <h2 id="gh">/api/gh</h2>
+        <p>This endpoint redirects to the GitHub repo of the Minecraft Launcher.</p>
+        <pre><code>GET /api/gh</code></pre>
+        <hr>
+        <h2 id="search">/api/search</h2>
+        <p>This endpoint searches for mods on Modrinth.</p>
+        <pre><code>GET /api/search?q=string</code></pre>
+        <p><code>q</code> is a required parameter that specifies the search query.</p>
+        <p>The endpoint returns a JSON object containing the search results.</p>
+        <h3>Example</h3>
+        <pre><code>GET /api/search?q=example</code></pre>
+        <p>Try it out: <a href="/api/search?q=example">/api/search?q=example</a></p>
+    </div>
+</body>
+
+</html>
