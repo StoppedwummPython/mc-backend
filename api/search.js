@@ -11,6 +11,11 @@ module.exports = {
      * @param {import("express").Response} res - The response object.
      */
     get: async (req, res) => {
+        if (req.query.q === undefined || req.query.q === "") {
+            // If no query is provided, return an error
+            res.status(400).json({ error: "No query provided" })
+            return
+        }
         // Construct the URL for the Modrinth API
         const url = "https://api.modrinth.com/v2/search"
         // Add the query parameter from the request
