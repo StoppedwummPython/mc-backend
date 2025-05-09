@@ -1,6 +1,15 @@
 const app = require("express")()
 const fs = require("fs")
 const path = require("path")
+const login = require("./auth/login.js")
+
+let sessions = {
+
+}
+
+require("dotenv").config({
+    path: path.join(__dirname, ".env.local"),
+})
 
 app.use(function (req, res, next) {
     console.log("[", req.method, "]", req.url)
